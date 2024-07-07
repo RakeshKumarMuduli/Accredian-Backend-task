@@ -31,7 +31,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-
+app.get('*', (req, res) => {
+    res.status(404).send('404: NOT_FOUND');
+  });
+  
 
 app.post('/refferAccount', (req, res) => {
     const { referrerName, referrerEmail, refereeName, refereeEmail } = req.body;
