@@ -32,9 +32,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    res.status(404).send('404: NOT_FOUND');
+    res.status(404).send('404: NOT_FOUND FILE');
   });
-  
+
 
 app.post('/refferAccount', (req, res) => {
     const { referrerName, referrerEmail, refereeName, refereeEmail } = req.body;
